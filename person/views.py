@@ -1,13 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from .models import Appointment
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the person index.")
-
+    return render(request, 'landing.html')
 
 def patient(request):
-    return
-
-def admin(request):
-    return
+    appoint_list = Appointment.objects.all()
+    return render(request, 'patient.html', {'appoint_list': appoint_list})

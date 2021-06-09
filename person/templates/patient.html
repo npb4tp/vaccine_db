@@ -1,0 +1,33 @@
+<link
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+  crossorigin="anonymous"
+/>
+<html>
+    {% load static %}
+<h1 class="col text-center">
+    Welcome Patient! Sign Up Below
+</h1>
+<div>
+    <ul>
+    {% if appoint_list %} 
+    {% for app in appoint_list %}
+    <li>
+        <ul>
+        <li>
+    {{ app.app_street }}
+        </li>
+        <li>
+        {{ app.app_start }}
+        </li>            
+         <li>
+         {{ app.vaccine_id.vacc_brand }}
+      </li>  
+    </ul>
+    </li>
+    {% endfor %}
+    {% endif %}
+</ul>
+</div>
+</html>

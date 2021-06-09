@@ -15,6 +15,28 @@ class Distributor(models.Model):
     dist_city = models.CharField(max_length=200, default="None")
     dist_street = models.CharField(max_length=200, default="None")
 
+class Patient(models.Model):
+    patient_fname = models.CharField(max_length=200, default="None")
+    patient_lname = models.CharField(max_length=200, default="None")
+    patient_dob = models.DateTimeField(default="None")
+    patient_allergies = models.CharField(max_length=1, default="None")
+    patient_state = models.CharField(max_length=200, default="None")
+    patient_zip = models.CharField(max_length=200, default="None")
+    patient_city = models.CharField(max_length=200, default="None")
+    patient_street = models.CharField(max_length=200, default="None")
+    patient_phone = models.CharField(max_length=200, default="None")
+    patient_partially_vacc = models.CharField(max_length=1, default="None")
+
+class Vaccinator(models.Model):
+    vaccinator_fname = models.CharField(max_length=200, default="None")
+    vaccinator_lname = models.CharField(max_length=200, default="None")
+    vaccinator_occupation = models.CharField(max_length=200, default="None")
+    vaccinator_phone = models.CharField(max_length=200, default="None") 
+
+class Vaccine(models.Model):
+    vacc_brand = models.CharField(max_length=200, default="None")
+    supp_id = models.ForeignKey(Supplier, on_delete=models.CASCADE)  
+
 class Appointment(models.Model):
     app_start = models.DateTimeField(default="None")
     app_end = models.DateTimeField(default="None")
@@ -28,24 +50,8 @@ class Appointment(models.Model):
     distributor_id = models.ForeignKey(Distributor, on_delete=models.CASCADE)
 
 
-class Patient(models.Model):
-    patient_fname = models.CharField(max_length=200, default="None")
-    patient_lname = models.CharField(max_length=200, default="None")
-    patient_dob = models.DateTimeField(default="None")
-    patient_allergies = models.CharField(max_length=1, default="None")
-    patient_state = models.CharField(max_length=200, default="None")
-    patient_zip = models.CharField(max_length=200, default="None")
-    patient_city = models.CharField(max_length=200, default="None")
-    patient_street = models.CharField(max_length=200, default="None")
-    patient_phone = models.CharField(max_length=200, default="None")
-    patient_partially_vacc = models.CharField(max_length=1, default="None")
 
-class Vaccine(models.Model):
-    vacc_brand = models.CharField(max_length=200, default="None")
-    supp_id = models.ForeignKey(Supplier, on_delete=models.CASCADE)
 
-class Vaccinator(models.Model):
-    vaccinator_fname = models.CharField(max_length=200, default="None")
-    vaccinator_lname = models.CharField(max_length=200, default="None")
-    vaccinator_occupation = models.CharField(max_length=200, default="None")
-    vaccinator_phone = models.CharField(max_length=200, default="None")
+
+
+

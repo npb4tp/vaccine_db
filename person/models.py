@@ -18,14 +18,14 @@ class Distributor(models.Model):
 class Patient(models.Model):
     patient_fname = models.CharField(max_length=200, default="None")
     patient_lname = models.CharField(max_length=200, default="None")
-    patient_dob = models.DateTimeField(null=True)
-    patient_allergies = models.CharField(max_length=1, default="None")
+    patient_dob = models.DateTimeField(default = '2000-01-01')
+    patient_allergies = models.CharField(max_length=1, default="N")
     patient_state = models.CharField(max_length=200, default="None")
     patient_zip = models.CharField(max_length=200, default="None")
     patient_city = models.CharField(max_length=200, default="None")
     patient_street = models.CharField(max_length=200, default="None")
     patient_phone = models.CharField(max_length=200, default="None")
-    patient_partially_vacc = models.CharField(max_length=1, default="None")
+    patient_partially_vacc = models.CharField(max_length=1, default="N")
 
 class Vaccinator(models.Model):
     vaccinator_fname = models.CharField(max_length=200, default="None")

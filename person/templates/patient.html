@@ -9,6 +9,13 @@
 <h1 class="col text-center">
     Welcome Patient! Sign Up Below
 </h1>
+<p ALIGN="center"><form action="/patient" method="POST">
+    {% csrf_token %}
+    <div class = "form69">
+      {{ form }}
+    </div>
+    
+
 <div>
     <ul>
     {% if appoint_list %} 
@@ -26,8 +33,12 @@
       </li>  
     </ul>
     </li>
+    <button type="submit" class="btn btn-success" name ='app' value = '{{app.id}}'>Sign Up for Appointment {{app.id}}</button>
     {% endfor %}
     {% endif %}
 </ul>
 </div>
+</form>
+</p>
+
 </html>

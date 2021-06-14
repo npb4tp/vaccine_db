@@ -1,3 +1,4 @@
+{% load crispy_forms_tags %}
 <link
   href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
   rel="stylesheet"
@@ -12,7 +13,7 @@
 <p ALIGN="center"><form action="/patient" method="POST">
     {% csrf_token %}
     <div class = "form69">
-      {{ form }}
+      {{ form | crispy }}
     </div>
     
 

@@ -10,8 +10,8 @@ class PatientSignup(forms.ModelForm):
         labels = {
         "patient_fname": "First Name",
         "patient_lname": "Last Name",
-        "patient_dob": "Birthday",
+        "patient_dob": "Date of Birth",
         "patient_allergies": "Allergies? (Y/N)",
         "patient_phone": "Phone Number",
-        "patient_partially_vacc":"Have you been vaccinated (Y/N)"
+        "patient_partially_vacc":"Are you partially vaccinated? (Y/N)"
         }

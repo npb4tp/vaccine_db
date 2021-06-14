@@ -11,7 +11,7 @@ class PatientSignup(forms.ModelForm):
         "patient_fname": "First Name",
         "patient_lname": "Last Name",
         "patient_dob": "Birthday",
-        "patient_allergies": "Allergies?",
+        "patient_allergies": "Allergies? (Y/N)",
         "patient_phone": "Phone Number",
-        "patient_partially_vacc":"Have you been vaccinated"
+        "patient_partially_vacc":"Have you been vaccinated (Y/N)"
         }

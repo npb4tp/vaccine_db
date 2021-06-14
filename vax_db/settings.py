@@ -83,7 +83,7 @@ DATABASES = {
         'NAME': 'VAX',
         'HOST': '127.0.0.1',
         'PORT': '3306',
-        'USER': 'alex',
+        'USER': 'root',
         'PASSWORD': 'vaccine1',
     }
 }

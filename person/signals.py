@@ -117,7 +117,6 @@ def populate_database(sender, **kwargs):
         vac2.save()
 
     if not Distributor.objects.all().exists() and Supplier.objects.all().exists():
-
         dis1 = Distributor(
             supp_id = supp1,
             dist_name = "Walmart",

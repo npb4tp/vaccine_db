@@ -153,5 +153,26 @@ def populate_database(sender, **kwargs):
         )
         dis3.save()
         
+    pat1 = Patient.objects.get(pk=1)
 
+    doc1 = Vaccinator.objects.get(pk=1)
+
+    vac1 = Vaccine.objects.get(pk=1)
+
+    dis1 = Distributor.objects.get(pk=1)
+
+    if not Appointment.objects.all().exists():
+        app = Appointment(
+            app_start = None,
+            app_end = None,
+            app_state = "Virginia",
+            app_zip = "test",
+            app_city = "Charlottesville",
+            app_street = "test",
+            patient_id = pat1,
+            vaccinator_id = doc1,
+            vaccine_id = vac1, 
+            distributor_id = dis1
+        )
+        app.save()
     print("signal works")

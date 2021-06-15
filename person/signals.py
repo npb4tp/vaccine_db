@@ -163,12 +163,12 @@ def populate_database(sender, **kwargs):
 
     if not Appointment.objects.all().exists():
         app = Appointment(
-            app_start = None,
-            app_end = None,
+            app_start = '15/11/2019 16:00:00',
+            app_end = '15/11/2019 16:30:00',
             app_state = "Virginia",
-            app_zip = "test",
+            app_zip = "22801",
             app_city = "Charlottesville",
-            app_street = "test",
+            app_street = "1588 down, S Main St",
             patient_id = pat1,
             vaccinator_id = doc1,
             vaccine_id = vac1, 
